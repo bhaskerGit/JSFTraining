@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsf/composite"
+	>
+
+    <h:head>
+    </h:head>
+    <h:body>
+    	<c:interface>
+    		<c:attribute name="userNameLabel"></c:attribute>
+    		<c:attribute name="userNameText"></c:attribute>
+    		<c:attribute name="passwordLabel"></c:attribute>
+    		<c:attribute name="passwordText"></c:attribute>
+    		<c:attribute name="registerText"></c:attribute>
+    		<c:attribute name="registerAction" method-signature="java.lang.String action()"></c:attribute>
+    	</c:interface>
+    	
+    	<c:implementation>
+    	<h:panelGrid columns="2">
+    		<h:outputText value="#{cc.attrs.userNameLabel}"/>
+    		<h:inputText value="#{cc.attrs.userNameText}"></h:inputText>
+    		<h:outputText value="#{cc.attrs.passwordLabel}"/>
+    		<h:inputSecret value="#{cc.attrs.passwordText}"></h:inputSecret>
+    		<h:commandButton value="#{cc.attrs.registerText}" action="#{cc.attrs.registerAction}"></h:commandButton>
+    	</h:panelGrid>	
+    	</c:implementation>
+    </h:body>
+    </html>
